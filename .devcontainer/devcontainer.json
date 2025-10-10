@@ -1,0 +1,35 @@
+{
+  "name": "Claude DevContainer",
+  "dockerComposeFile": ["./docker-compose.yml"],
+  "service": "dev",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "anthropic.claude-code",
+        "shd101wyy.markdown-preview-enhanced"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+          }
+        },
+        // Claude Codeのアイコンを常に表示
+        "claude.showIconInEditorTitleMenu": true
+      }
+    }
+  },
+  "remoteUser": "node",
+  "mounts": [
+    "source=claude-code-bashhistory,target=/commandhistory,type=volume",
+    "source=claude-code-config,target=/home/node/.claude,type=volume",
+    "source=gh-config,target=/home/node/.config/gh,type=volume"
+  ],
+  "remoteEnv": {
+    "NODE_OPTIONS": "--max-old-space-size=4096",
+    "CLAUDE_CONFIG_DIR": "/home/node/.claude"
+  },
+  "workspaceFolder": "/workspace"
+}
