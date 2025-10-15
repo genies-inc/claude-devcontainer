@@ -1,7 +1,7 @@
 {
   "name": "Claude DevContainer",
   "dockerComposeFile": ["./docker-compose.yml"],
-  "service": "dev",
+  "service": "devcontainer",
   "customizations": {
     "vscode": {
       "extensions": [

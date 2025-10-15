@@ -1,6 +1,9 @@
 version: "3.8"
+name: ${COMPOSE_PROJECT_NAME:-dev-container}
 services:
-  dev:
+  devcontainer:
+    image: claude-devcontainer
+    container_name: ${CONTAINER_NAME:-claude-code}
     environment:
       - TZ=Asia/Tokyo
     build:
