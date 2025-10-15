@@ -40,4 +40,6 @@ ENV PATH=$PATH:/usr/local/share/npm-global/bin
 ENV npm_config_unsafe_perm=true
 
 # Claudeをインストール（エラー時の詳細表示のため--verboseを追加）
-RUN npm install -g @anthropic-ai/claude-code --verbose
+# インストール後にclaudeコマンドのシンボリックリンクを明示的に作成
+RUN npm install -g @anthropic-ai/claude-code --verbose && \
+    ln -sf /usr/local/share/npm-global/lib/node_modules/@anthropic-ai/claude-code/cli.js /usr/local/share/npm-global/bin/claude
