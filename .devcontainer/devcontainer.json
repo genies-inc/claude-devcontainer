@@ -31,5 +31,7 @@
     "NODE_OPTIONS": "--max-old-space-size=4096",
     "CLAUDE_CONFIG_DIR": "/home/node/.claude"
   },
-  "workspaceFolder": "/workspace"
+  "workspaceFolder": "/workspace",
+  // Dev Container起動時にGit設定を適用（改行コード変換を無効化）
+  "postStartCommand": "git config --global core.autocrlf false"
 }
