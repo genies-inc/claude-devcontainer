@@ -6,7 +6,8 @@
     "vscode": {
       "extensions": [
         "anthropic.claude-code",
-        "shd101wyy.markdown-preview-enhanced"
+        "shd101wyy.markdown-preview-enhanced",
+        "bierner.markdown-mermaid"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "bash",
