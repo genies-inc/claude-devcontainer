@@ -1,0 +1,135 @@
+
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+.markdown-preview.markdown-preview {
+  // Claude-inspired warm color scheme
+  background-color: #f5f1ed;
+  color: #2d2d2d;
+  font-family: 'Times New Roman', 'YuMincho', 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', serif;
+  line-height: 1.8;
+  padding: 2rem;
+
+  // Headings with warm accents
+  h1, h2, h3, h4, h5, h6 {
+    color: #1a1a1a;
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+
+  h1 {
+    border-bottom: 2px solid #cc785c;
+    padding-bottom: 0.3em;
+    color: #a0522d;
+  }
+
+  h2 {
+    border-bottom: 1px solid #d4c5b9;
+    padding-bottom: 0.3em;
+  }
+
+  // Links
+  a {
+    color: #a0522d;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #cc785c;
+      text-decoration: underline;
+    } 
+  }
+
+  // Code blocks
+  code {
+    background-color: #ebe4dc;
+    color: #8b4513;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: 'Fira Code', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9em;
+  }
+
+  pre {
+    background-color: #ebe4dc;
+    border: 1px solid #d4c5b9;
+    border-radius: 6px;
+    padding: 1em;
+    overflow-x: auto;
+
+    code {
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+
+  // Blockquotes
+  blockquote {
+    border-left: 4px solid #cc785c;
+    background-color: #faf7f4;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    color: #4a4a4a;
+
+    p {
+      margin: 0.5em 0;
+    }
+  }
+
+  // Tables
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+
+    th, td {
+      border: 1px solid #d4c5b9;
+      padding: 0.6em 1em;
+      text-align: left;
+    }
+
+    th {
+      background-color: #ebe4dc;
+      color: #a0522d;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+      background-color: #faf7f4;
+    }
+  }
+
+  // Lists
+  ul, ol {
+    padding-left: 2em;
+
+    li {
+      margin: 0.3em 0;
+    }
+  }
+
+  // Horizontal rule
+  hr {
+    border: none;
+    border-top: 2px solid #d4c5b9;
+    margin: 2em 0;
+  }
+
+  // Images
+  img {
+    max-width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  // Inline code emphasis
+  strong {
+    color: #1a1a1a;
+    font-weight: 600;
+  }
+
+  em {
+    color: #4a4a4a;
+  }
+}
