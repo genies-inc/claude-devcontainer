@@ -1,0 +1,248 @@
+/* AsciiDoc Preview Custom Styles for DevContainer */
+
+/* 全体のフォント設定 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', sans-serif;
+  line-height: 1.8;
+  color: #333;
+  background-color: #f8f9fa;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 見出し */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+h1 {
+  font-size: 2.5rem;
+  border-bottom: 3px solid #0066cc;
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid #0088ff;
+  padding-bottom: 0.4rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #0066cc;
+}
+
+/* コードブロック */
+pre, code {
+  font-family: 'Monaco', 'Menlo', 'Consolas', 'Courier New', monospace;
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+}
+
+pre {
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  border-left: 4px solid #0066cc;
+}
+
+code {
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* インラインコード */
+p code, li code, td code {
+  background-color: #f4f4f4;
+  color: #c7254e;
+  border: 1px solid #e1e1e8;
+}
+
+/* テーブル */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  background-color: #0066cc;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #0055aa;
+}
+
+td {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+tr:hover {
+  background-color: #e9ecef;
+}
+
+/* リスト */
+ul, ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+li {
+  margin: 0.5rem 0;
+}
+
+/* 水平線 */
+hr {
+  border: none;
+  border-top: 2px solid #ddd;
+  margin: 2rem 0;
+}
+
+/* 引用 */
+blockquote {
+  border-left: 4px solid #0066cc;
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  background-color: #f0f7ff;
+  font-style: italic;
+}
+
+/* リテラルブロック */
+.literalblock pre {
+  background-color: #f4f4f4;
+  color: #333;
+  border-left: 4px solid #999;
+}
+
+/* Admonition (注意事項ブロック) */
+.admonitionblock {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 4px solid;
+}
+
+.admonitionblock.note {
+  background-color: #e7f3ff;
+  border-color: #0066cc;
+}
+
+.admonitionblock.tip {
+  background-color: #e6f7e6;
+  border-color: #28a745;
+}
+
+.admonitionblock.important,
+.admonitionblock.warning {
+  background-color: #fff3cd;
+  border-color: #ffc107;
+}
+
+.admonitionblock.caution {
+  background-color: #ffe6e6;
+  border-color: #dc3545;
+}
+
+/* Mermaid ダイアグラム */
+.mermaid {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* リンク */
+a {
+  color: #0066cc;
+  text-decoration: none;
+  border-bottom: 1px dotted #0066cc;
+}
+
+a:hover {
+  color: #0088ff;
+  border-bottom: 1px solid #0088ff;
+}
+
+/* ドキュメントタイトル */
+#header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #0066cc;
+}
+
+#header h1 {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* TOC (目次) */
+#toc {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  margin: 1.5rem 0;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#toc ul {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+/* セクション */
+.sect1 {
+  margin-top: 3rem;
+}
+
+.sect2 {
+  margin-top: 2rem;
+}
+
+/* パラグラフ */
+.paragraph {
+  margin: 1rem 0;
+}
+
+/* ソースコードハイライト */
+.highlight {
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+}

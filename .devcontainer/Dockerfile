@@ -6,7 +6,9 @@ RUN apt update && apt install -y \
   less \
   procps \
   sudo \
-  jq
+  jq \
+  chromium \
+  fonts-noto-cjk
 
 # nodeユーザーにsudo権限を付与
 RUN echo "node ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
@@ -43,3 +45,10 @@ ENV npm_config_unsafe_perm=true
 # インストール後にclaudeコマンドのシンボリックリンクを明示的に作成
 RUN npm install -g @anthropic-ai/claude-code --verbose && \
     ln -sf /usr/local/share/npm-global/lib/node_modules/@anthropic-ai/claude-code/cli.js /usr/local/share/npm-global/bin/claude
+
+# Mermaid CLI をインストール（AsciiDocのダイアグラムをローカルで生成）
+RUN npm install -g @mermaid-js/mermaid-cli
+
+# Puppeteerの設定（Chromiumを使用）
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium

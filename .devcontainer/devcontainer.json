@@ -7,7 +7,9 @@
       "extensions": [
         "anthropic.claude-code",
         "shd101wyy.markdown-preview-enhanced",
-        "bierner.markdown-mermaid"
+        "bierner.markdown-mermaid",
+        "mathematic.vscode-pdf",
+        "asciidoctor.asciidoctor-vscode"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "bash",
@@ -18,7 +20,15 @@
           }
         },
         // Claude Codeのアイコンを常に表示
-        "claude.showIconInEditorTitleMenu": true
+        "claude.showIconInEditorTitleMenu": true,
+        // Asciidoctor設定: ローカルでダイアグラムを生成
+        "asciidoc.extensions.enableKroki": false,
+        "asciidoc.preview.attributes": {
+          "mermaid-cli": "/usr/local/share/npm-global/bin/mmdc"
+        },
+        "asciidoc.preview.style": "${containerWorkspaceFolder}/.devcontainer/asciidoc-preview.css",
+        // Markdown Preview Enhanced設定
+        "markdown-preview-enhanced.krokiServer": ""
       }
     }
   },
